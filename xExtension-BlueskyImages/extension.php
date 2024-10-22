@@ -46,6 +46,9 @@ class BlueskyImageExtension extends Minz_Extension {
 
   // fetch urls of any images in the post from the post's link preview metadata
   private function getImageURLs($link): array { 
+    // switch off libxml's error handling so the logs don't get spammed with warnings...
+    libxml_use_internal_errors(true);
+
     // get the post
     $instance_page = file_get_contents($link);
     $page = new DOMDocument;
@@ -60,6 +63,9 @@ class BlueskyImageExtension extends Minz_Extension {
       if ($meta->getAttribute('property') == 'og:image')
         $img_urls[] = $meta->getAttribute('content');
     }
+
+    // ok turn it back on now
+    libxml_use_internal_errors(false);
 
     return $img_urls;
   }
