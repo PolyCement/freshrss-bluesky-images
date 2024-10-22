@@ -1,0 +1,8 @@
+{
+	"name": "Bluesky Image Grabber",
+	"author": "PolyCement",
+	"description": "Fetch images from Bluesky posts and append them to the post body",
+	"version": 0.1,
+	"entrypoint": "BlueskyImage",
+	"type": "user"
+}
