@@ -4,7 +4,7 @@ bluesky has added rss support, but the feeds it produces only contain text. this
 
 ## installation
 
-clone this repo, then copy the `xExtension-BlueskyImages` directory (and its contents) into freshrss' extensions directory (`/var/www/FreshRSS/extensions/`). once it's in place, reboot freshrss, go to the extensions config page and enable the plugin.
+clone this repo, then copy the `xExtension-BlueskyImages` directory (and its contents) into freshrss' extensions directory (`/var/www/FreshRSS/extensions/`). once it's in place, go to the extensions config page and enable the plugin.
 
 note that the plugin will only add images to posts fetched *after* it's been installed!
 
